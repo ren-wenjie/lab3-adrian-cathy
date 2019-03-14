@@ -4,7 +4,7 @@
 package lab3;
 
 /**
- * @author kkeogh
+ * @author Adrian Page
  *
  */
 public class Person {
