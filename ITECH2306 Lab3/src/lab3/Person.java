@@ -4,13 +4,15 @@
 package lab3;
 
 /**
- * @author Adrian Page
+ * @author Adrian Page and Cathy Wu
  *
  */
 public class Person {
 	String name;  // name of person
 	String address; // address of person
 	String postcode; // postcode of person's address
+	String city;
+	String Phone;
 	Animal pet; // associate a pet that is an Animal object with the Person
 	
 	
