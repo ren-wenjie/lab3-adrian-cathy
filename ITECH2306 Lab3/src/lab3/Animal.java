@@ -4,7 +4,7 @@
 package lab3;
 
 /**
- * @author Kkeogh
+ * @author Adrian Page and Cathy Wu
  *
  */
 public class Animal {
