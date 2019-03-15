@@ -1,37 +1,69 @@
-/**
- * 
- */
 package lab3;
 
-/**
- * @author Adrian Page and Cathy Wu
- *
- */
 public class Animal {
-
-	private String breed;
-	private String name;
-	private int registrationID;
-	private static int nextValidRegistrationID=1; 
-	
 	/**
-	 * @param breed
-	 * @param name
-	 * registrationID - allocated automatically
+	 * @author Adrian & Cathy 
+	 *
 	 */
-	public Animal(String _breed, String _name) {
-		this.breed = _breed;
-		this.name = _name;
-		this.setRegistrationID(); 
-	}
 
-	private void setRegistrationID() { // allocate next available ID
-		this.registrationID = nextValidRegistrationID++;
+
+		private String _breed;
+		private String _name;
+		private int _registrationID;
+		private static int nextValidRegistrationID=1; 
+		
+		/**
+		 * @param breed
+		 * @param name
+		 * registrationID - allocated automatically
+		 */
+		// default value
+		
+		Animal() {
+			_name = null;
+			_breed = "";
+					
+		}	
+		
+		
+		// RegistrationID - allocated automatically, start with 1
+		Animal(String name, String breed) {
+	    	 _registrationID = nextValidRegistrationID++;
+	    	 _breed = breed;
+			 _name = name;
+			 
+		}
+		
+	     // getter and setter
+		
+			public void setName(String name) {
+				_name = name;
+			}
+			
+			public void breed(String breed) {
+				_breed = breed;
+			}
+			
+			public void setRegistrationID(int registrationID) {
+				_registrationID = registrationID;
+			}	
+								
+			public String getName() {
+				return _name;
+		    }
+
+			public String getBreed(){
+				return _breed;
+			}
+				
+			public int registrationID() {
+				return _registrationID;
+			}
+			
+			// create a String description of an animal attributes 
+		
+		public String toString() {
+			return "Animal [breed=" + _breed + ", name=" + _name + ", registrationID=" + _registrationID + "]";
+		}
+		
 	}
-	
-	@Override
-	public String toString() {
-		return "Animal [breed=" + breed + ", name=" + name + ", registrationID=" + registrationID + "]";
-	}
-	
-}
