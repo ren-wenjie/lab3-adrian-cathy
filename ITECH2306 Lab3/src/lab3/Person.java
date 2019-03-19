@@ -2,7 +2,6 @@
  * 
  */
 package lab3;
-
 /**
  * @author Adrian Page and Cathy Wu
  *
@@ -12,37 +11,67 @@ public class Person {
 	String address; // address of person
 	String postcode; // postcode of person's address
 	String city;
-	String Phone;
+	String phone;
 	Animal pet; // associate a pet that is an Animal object with the Person
-	Course course;
+	private Course myCourse; // associate a Course object with the Person
+	
+	
+	//constructor - special method called when new Person() is invoked
+	
+	Person() {
+		this.name = "";
+		this.address = "";// default year of birth is 1900
+		this.city = "";
+		this.postcode = "";
+	    this.phone = "";
+		this.pet = new Animal();
+		this.myCourse = new Course();
+	}
 	
 	// constructor - create Person given name, address and a Pet object
 	/**
 	 * @param name
 	 * @param address
+	 * @param city
+	 * @param phone
 	 * @param pet
+	 * @param myCourse
+	 * 
 	 */
-	public Person(String name, String address, Animal pet) {
+	public Person(String name, String address, String city, String postcode,String phone, Animal pet) {
 		this.name = name;
 		this.address = address;
+		this.city = city;
+		this.postcode = postcode;
+		this.phone = phone;
 		this.pet = pet;
 	}
 	
-	// constructor - create Person given address, name and postcode
-	/**
-	 * @param _address 
-	 * @param _name
-	 * @param _postcode
-	 */
-	Person (String _address, String _name, String _postcode)
-	{
-	this.setAddress(_address);
-	this.setName (_name);
-	this.setPostcode (_postcode);
+	public Person(String name, String address, String city, String postcode, Animal pet) {
+		this.name =  name;
+		this.address = address;
+		this.city = city; 
+		this.postcode = postcode;
+		this.pet = pet;		
 	}
 	
-	/**
-	 * @return the name
+	public Person(String name, String address, String postCode, String city, Course myCourse) {
+		this.name = name;
+		this.address = address;
+		this.city = city; 
+		this.myCourse = myCourse;
+	}
+	
+	public Person(String name, String address, String postCode, String city, String phone,  Course myCourse) {
+		this.name = name;
+		this.address = address;
+		this.city = city; 
+		this.phone = phone;
+		this.myCourse = myCourse;
+	}
+	
+		
+	/**	 * @return the name
 	 */
 	public String getName() {
 		return name;
@@ -66,29 +95,56 @@ public class Person {
 		this.address = _address;
 	}
 	/**
+	 * @param city the city to set
+	 */	
+	
+	public void setCity(String _city) {
+		this.city = _city;
+	}
+	
+	/**
+	 * @param return the city 
+	 */
+		
+	public String getCity() {
+		return city;
+	}
+	
+	/**
 	 * @param postcode the postcode to set
 	 */
-	private void setPostcode(String _postcode) {
+	
+	public void setPostcode (String _postcode) {
 		this.postcode = _postcode;
 		
 	}
+	
+	/**
+	 * @param return the postcode
+	 */
+		
+	public String getPostcode() {
+		return postcode;
+	}
+		
+	
 	/**
 	 * @param _pet the pet animal to associate
 	 */
-	void addAPet(Animal _pet) {
+	public void addAPet(Animal _pet) {
 		this.pet = _pet;
 		}
 	
-	void addCourse(Course _course) {
-		this.course = _course;
-	}
+	public void addACourse(Course _myCourse) {
+		this.myCourse = _myCourse;
+		}
+
 	
 	@Override
 	public String toString() {
-		return "Person [name=" + name + ", address=" + address + ", postcode=" + postcode + 
-				",\n pet=" + pet  + "]";
+		return "Person name= " + name + ", address= " + address + ", city= " + city + ", postcode= " + postcode + 
+				",\n pet=" + pet  + "; enrolled course: " + myCourse; 
 	}
-
 
 
 }
