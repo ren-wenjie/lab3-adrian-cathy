@@ -55,14 +55,6 @@ public class Person {
 		this.pet = pet;		
 	}
 	
-	public Person(String name, String address, String postCode, String city, String phone,  Course myCourse) {
-		this.name = name;
-		this.address = address;
-		this.city = city; 
-		this.phone = phone;
-		this.myCourse = myCourse;
-	}
-	
 	public Person(String name, String address, String postCode, String city, Course myCourse) {
 		this.name = name;
 		this.address = address;
@@ -70,7 +62,13 @@ public class Person {
 		this.myCourse = myCourse;
 	}
 	
-	
+	public Person(String name, String address, String postCode, String city, String phone,  Course myCourse) {
+		this.name = name;
+		this.address = address;
+		this.city = city; 
+		this.phone = phone;
+		this.myCourse = myCourse;
+	}
 		
 	/**	 * @return the name
 	 */
