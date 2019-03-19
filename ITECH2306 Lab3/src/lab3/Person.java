@@ -20,7 +20,7 @@ public class Person {
 	
 	Person() {
 		this.name = "";
-		this.address = "";// default year of birth is 1900
+		this.address = "";
 		this.city = "";
 		this.postcode = "";
 	    this.phone = "";
