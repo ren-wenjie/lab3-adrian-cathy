@@ -23,7 +23,7 @@ public class TestDriverClass {
 		// create test case 2 - another person owing a pet dog
 		Person p2 = new Person("12 curly avenue","Fred", "3350");
 		Animal anotherPet = new Animal("Labrador","Sue");
-		Course c2 = new Course("Test Course", 11,1000.0); //Test course with too many days
+		Course c2 = new Course("Test Course", 10,1000.0); //Test course with too many days
 		p2.addAPet(anotherPet);
 		p2.addCourse(c2);
 		System.out.println("I have a second person object : " + p2 + c2);

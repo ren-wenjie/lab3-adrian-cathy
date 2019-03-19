@@ -43,7 +43,7 @@ public class Course {
 	
 		if(numberOfDays >= 1 && numberOfDays <=10)
 		{
-			setNumberOfDays(numberOfDays);
+			_numberOfDays = numberOfDays;
 		}
 		else
 		{
@@ -70,7 +70,7 @@ public class Course {
 	}
 	public String toString ()
 	{
-		if (_validDays == true) {
+		if (GetValidDays() == true) {
 			return "Anson recently enrolled into " + _name +" which takes " + _numberOfDays +" days to complete and it costs " + _price + ".";
 		}
 		else
