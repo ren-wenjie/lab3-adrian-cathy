@@ -14,7 +14,7 @@ public class Person {
 	String city;
 	String Phone;
 	Animal pet; // associate a pet that is an Animal object with the Person
-	
+	Course course;
 	
 	// constructor - create Person given name, address and a Pet object
 	/**
@@ -79,7 +79,9 @@ public class Person {
 		this.pet = _pet;
 		}
 	
-	
+	void addCourse(Course _course) {
+		this.course = _course;
+	}
 	
 	@Override
 	public String toString() {
