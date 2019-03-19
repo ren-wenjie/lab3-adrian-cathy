@@ -1,8 +1,10 @@
-/**
- * 
- */
+
 package lab3;
 
+/**
+ * @author Adrian Page and Cathy Wu
+ *
+ */
 /**
  * @author Adrian Page and Cathy Wu
  *
@@ -20,7 +22,7 @@ public class Person {
 
 	Person() {
 		this.name = "";
-		this.address = "";
+		this.address = "";// default year of birth is 1900
 		this.city = "";
 		this.postcode = "";
 		this.phone = "";
