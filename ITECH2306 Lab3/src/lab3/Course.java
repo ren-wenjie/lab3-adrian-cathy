@@ -11,17 +11,26 @@ public class Course {
 	// associate a Course object with the Person
 
 	Course() {
-		_name = null;
-		_numberOfDays = 0;
-		_price = 0.0;
-		_validDays = true;
+		setValidDays(true);
+		setName(null);
+		setNumberOfDays(0);
+		setPrice(0.0);
 	}
 	
 	Course (String name, int days, double price) {
-		_name = name;
-		_numberOfDays = days;
-		_price = price;
-		_validDays = true;
+		setValidDays(true);
+		setName(name);
+		setNumberOfDays(days);
+		setPrice(price);
+		
+	}
+
+	public boolean GetValidDays() {
+		return _validDays;
+	}
+
+	public void setValidDays(boolean _validDays) {
+		this._validDays = _validDays;
 	}
 
 	// name the name, length and price of the course	
@@ -34,11 +43,11 @@ public class Course {
 	
 		if(numberOfDays >= 1 && numberOfDays <=10)
 		{
-			_numberOfDays = numberOfDays;
+			setNumberOfDays(numberOfDays);
 		}
 		else
 		{
-			_validDays = false;
+			setValidDays(false);
 		}
 						
 								
