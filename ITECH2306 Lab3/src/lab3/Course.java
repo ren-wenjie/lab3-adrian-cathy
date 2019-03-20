@@ -1,6 +1,6 @@
 package lab3;
 
-import javax.swing.JOptionPane;
+
 
 public class Course {
 	// data or instance variables for object Course

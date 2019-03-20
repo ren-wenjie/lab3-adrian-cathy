@@ -26,7 +26,7 @@ public class TestDriverClass {
 	 p2.addAPet(anotherPet);
 	 System.out.println("I have a second person object : " + p2);
 	 
-	 Course myCourse = new Course("Java", 10, 1000.00);
+	 Course myCourse = new Course("Java", 15, 1000.00);
 	 Person p3 = new Person("Anson", "25 Boak Avenue", " Buninyong VIC", "3357", myCourse);
 	 p2.addACourse(myCourse);
 	 System.out.println("I have a third person object : " + p3.toString());
