@@ -4,7 +4,7 @@
 package lab3;
 
 /**
- * @author kkeogh
+ * @author Adrian and Cathy
  *  This is a class used to test my Council information system classes
  */
 public class TestDriverClass {
