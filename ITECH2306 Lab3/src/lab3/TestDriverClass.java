@@ -3,10 +3,6 @@
  */
 package lab3;
 
-/**
- * @author Adrian and Cathy
- *  This is a class used to test my Council information system classes
- */
 public class TestDriverClass {
 
 	/**
